@@ -28,6 +28,16 @@ userSchema.methods.toJSON = async function () {
   return user
 }
 
-const User = mongoose.model('User', userSchema)
+interface IUser extends Document {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    password: string;
+    isAdmin: boolean;
+    comparePassword(password: string): Promise<boolean>;
+}
+
+const User = mongoose.model<IUser>('User', userSchema)
 
 export default User;

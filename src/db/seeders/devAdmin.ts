@@ -1,7 +1,7 @@
-import User from '../user'
+import User from '../models/user'
 
 const devAdminSeeder = async () => {
-  const user = await User.findOne({ email: 'admin@example.com' })
+  const user = await User.findOne({ email: 'john.doe@example.com' })
   if (!user) {
     await User.create({
       firstName: 'John',

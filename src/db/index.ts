@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import devAdmin from "./models/seeders/devAdmin";
+import devAdmin from "./seeders/devAdmin";
 
 dotenv.config();
 
