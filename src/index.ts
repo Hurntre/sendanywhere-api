@@ -50,7 +50,6 @@ app.all('*', (req, res) => {
 // connect to database server and start application server
 db.connect()
     .then(() => {
-        console.log('Connected to MongoDB');
         app.listen(port, () =>
             console.log(`Server listening on port ${port}...`)
         );

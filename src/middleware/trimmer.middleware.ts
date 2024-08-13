@@ -1,12 +1,13 @@
 import { Request, Response, NextFunction } from 'express';
 
 const trimmer = (req: Request, res: Response, next: NextFunction) => {
-    req.body = Object.keys(req.body).forEach((key) => {
-        if (typeof req.body[key] === 'string') {
-            req.body[key] = req.body[key].trim();
+    const { body } = req;
+    Object.keys(body).forEach((key) => {
+        if (typeof body[key] === 'string') {
+            body[key] = body[key].trim();
         }
     });
-    next();
+    return next();
 };
 
 export default trimmer;
