@@ -9,7 +9,7 @@ import middleware from './middleware';
 
 // Load environment variables
 dotenv.config();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 1999;
 const baseUrl = '/api/v1';
 
 // Initialize express app
