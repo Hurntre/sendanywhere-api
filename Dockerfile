@@ -16,5 +16,8 @@ COPY . .
 # Creates a "dist" folder with the production build
 RUN npm run build
 
+# Expose port 8000
+EXPOSE 8000
+
 # Start the server using the production build
 CMD [ "npm", "run", "start:prod" ]
