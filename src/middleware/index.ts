@@ -1,5 +1,4 @@
-import trimmer from './trimmer.middleware';
+import trimmer from './trimmer';
+import auth from './auth';
 
-export default {
-    trimmer,
-};
+export { trimmer, auth };

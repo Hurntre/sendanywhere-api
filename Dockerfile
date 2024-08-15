@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Expose port 8000
-EXPOSE 8000
+EXPOSE 1999
 
 # Start the server using the production build
 CMD [ "npm", "run", "start:prod" ]

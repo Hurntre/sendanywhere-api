@@ -40,6 +40,10 @@ userSchema.methods.comparePassword = async function (
 userSchema.set('toJSON', {
     transform: function (doc, ret) {
         delete ret.password;
+        delete ret.isAdmin;
+        delete ret.createdAt;
+        delete ret.updatedAt;
+        delete ret.__v;
         return ret;
     },
 });

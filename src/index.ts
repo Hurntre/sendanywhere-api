@@ -5,7 +5,7 @@ import helmet from 'helmet';
 import compression from 'compression';
 import db from './db';
 import routes from './routes';
-import middleware from './middleware';
+import { trimmer } from './middleware';
 
 // Load environment variables
 dotenv.config();
@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Apply request body trimmer middleware
-app.use(middleware.trimmer);
+app.use(trimmer);
 
 // Third party middleware
 app.use(cors()); // cors middleware to enable cors
