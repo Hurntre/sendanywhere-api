@@ -58,5 +58,5 @@ db.connect()
         console.log('Error connecting to MongoDB', error);
     });
 
-// export for access to server in tests
+// export for access to server in tests that hasn't been set up
 export default app;
